@@ -5,6 +5,7 @@ import "./ficha.css";
 import integrantes from "../JSON/IntegrantesCultura.json";
 import wordLogo from "../assets/Microsoft-Word-Logo.png";
 import texturaFondo from "../assets/TexturaMenu.png";
+
 const FichaCyC = () => {
   const normalizar = texto => texto?.toLowerCase().trim();
 
@@ -19,11 +20,6 @@ const FichaCyC = () => {
   const integrantesRestantes = integrantes.filter(p =>
     normalizar(p.cargo) === "integrante"
   );
-
-  const filasIntegrantes = [];
-  for (let i = 0; i < integrantesRestantes.length; i += 5) {
-    filasIntegrantes.push(integrantesRestantes.slice(i, i + 5));
-  }
 
   const exportarComoWordHTML = async () => {
     const container = document.querySelector(".containerTabla");
@@ -109,17 +105,15 @@ const FichaCyC = () => {
           </>
         )}
 
-        {filasIntegrantes.length > 0 && (
+        {integrantesRestantes.length > 0 && (
           <>
             <h3 className="TituloTabla">Integrantes</h3>
             <hr className="red" />
-            {filasIntegrantes.map((fila, filaIndex) => (
-              <div className="filaFichas" key={`fila-${filaIndex}`}>
-                {fila.map((persona, index) => (
-                  <FichaCard key={`int-${filaIndex}-${index}`} persona={persona} />
-                ))}
-              </div>
-            ))}
+            <div className="filaFichas">
+              {integrantesRestantes.map((persona, index) => (
+                <FichaCard key={`int-${index}`} persona={persona} />
+              ))}
+            </div>
           </>
         )}
 
@@ -159,15 +153,16 @@ const FichaCard = ({ persona }) => {
   })();
 
   return (
-    /* <div className="fichaCyC-card"> */ /*<-----Estilo Sencillo*/ 
-     <div className="fichaCyC-card" style={{
-      backgroundImage: `url(${texturaFondo})`,
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat", 
-      backgroundPosition: "center"
-      }}>
-        
-     <div className="fichaCyC-imagen">
+    <div
+      className="fichaCyC-card"
+      style={{
+        backgroundImage: `url(${texturaFondo})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center"
+      }}
+    >
+      <div className="fichaCyC-imagen">
         <img src={`/${foto}`} alt={`Foto de ${nombre}`} />
       </div>
 
@@ -187,7 +182,7 @@ const FichaCard = ({ persona }) => {
               className="botonTrayectoria"
               onClick={() => setMostrarTrayectoria(prev => !prev)}
             >
-              {mostrarTrayectoria ? "Ocultar trayectoria" : "Trajectoria Administrativa"}
+              {mostrarTrayectoria ? "Ocultar trayectoria" : "Trayectoria Administrativa"}
             </button>
 
             <div className={`trayectoriaCortina ${mostrarTrayectoria ? "abierta" : ""}`}>
