@@ -7,6 +7,8 @@ import wordLogo from "../assets/Microsoft-Word-Logo.png";
 import texturaFondo from "../assets/TexturaMenu.png";
 
 const FichaCyC = () => {
+  const [fichaActiva, setFichaActiva] = useState(null);
+
   const normalizar = texto => texto?.toLowerCase().trim();
 
   const presidente = integrantes.find(p =>
@@ -88,7 +90,15 @@ const FichaCyC = () => {
             <h3 className="TituloTabla">Presidenta</h3>
             <hr className="red" />
             <div className="filaFichas">
-              <FichaCard persona={presidente} />
+              <FichaCard
+                persona={presidente}
+                activa={fichaActiva === presidente.nombre}
+                activar={() =>
+                  setFichaActiva(prev =>
+                    prev === presidente.nombre ? null : presidente.nombre
+                  )
+                }
+              />
             </div>
           </>
         )}
@@ -99,7 +109,16 @@ const FichaCyC = () => {
             <hr className="red" />
             <div className="filaFichas">
               {secretarios.map((persona, index) => (
-                <FichaCard key={`sec-${index}`} persona={persona} />
+                <FichaCard
+                  key={`sec-${index}`}
+                  persona={persona}
+                  activa={fichaActiva === persona.nombre}
+                  activar={() =>
+                    setFichaActiva(prev =>
+                      prev === persona.nombre ? null : persona.nombre
+                    )
+                  }
+                />
               ))}
             </div>
           </>
@@ -111,7 +130,16 @@ const FichaCyC = () => {
             <hr className="red" />
             <div className="filaFichas">
               {integrantesRestantes.map((persona, index) => (
-                <FichaCard key={`int-${index}`} persona={persona} />
+                <FichaCard
+                  key={`int-${index}`}
+                  persona={persona}
+                  activa={fichaActiva === persona.nombre}
+                  activar={() =>
+                    setFichaActiva(prev =>
+                      prev === persona.nombre ? null : persona.nombre
+                    )
+                  }
+                />
               ))}
             </div>
           </>
@@ -129,7 +157,7 @@ const FichaCyC = () => {
   );
 };
 
-const FichaCard = ({ persona }) => {
+const FichaCard = ({ persona, activa, activar }) => {
   const {
     nombre,
     cargo,
@@ -139,8 +167,6 @@ const FichaCard = ({ persona }) => {
     t_administrativa,
     foto
   } = persona;
-
-  const [mostrarTrayectoria, setMostrarTrayectoria] = useState(false);
 
   const trayectoria = (() => {
     if (typeof t_administrativa === "string") {
@@ -178,14 +204,11 @@ const FichaCard = ({ persona }) => {
 
         {trayectoria.length > 0 && (
           <div className="trayectoriaContenedor">
-            <button
-              className="botonTrayectoria"
-              onClick={() => setMostrarTrayectoria(prev => !prev)}
-            >
-              {mostrarTrayectoria ? "Ocultar trayectoria" : "Trayectoria Administrativa"}
+            <button className="botonTrayectoria" onClick={activar}>
+              {activa ? "Ocultar trayectoria" : "Trayectoria Administrativa"}
             </button>
 
-            <div className={`trayectoriaCortina ${mostrarTrayectoria ? "abierta" : ""}`}>
+            <div className={`trayectoriaCortina ${activa ? "abierta" : ""}`}>
               <ul className="fichaCyC-sublista">
                 {trayectoria.map((item, index) => (
                   <li key={index}>{item}</li>
