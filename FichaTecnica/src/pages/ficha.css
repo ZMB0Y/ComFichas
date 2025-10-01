@@ -36,6 +36,7 @@
   width: 70%;
   max-width: 1000px;
   overflow: hidden;
+  min-height: 275px;
 }
 
 .fichaCyC-imagen {
@@ -125,7 +126,7 @@
 }
 
 .trayectoriaCortina.abierta {
-  max-height: 500px;
+  max-height: 1000px;
 }
 
 .fichaCyC-card {
@@ -142,5 +143,28 @@
   .fichaCyC-card {
     flex: 0 0 90%;
     max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fichaCyC-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fichaCyC-imagen {
+    width: 100%;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .fichaCyC-imagen img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  .fichaCyC-datos {
+    padding: 1rem;
+    width: 100%;
   }
 }
