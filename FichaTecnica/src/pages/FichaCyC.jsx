@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ScrollToTop from "../components/ScrollToTop";
 import RutaIndicadores from "../components/Ruta";
 import "./ficha.css";
 import integrantes from "../JSON/IntegrantesCultura.json";
 import wordLogo from "../assets/Microsoft-Word-Logo.png";
-
+import texturaFondo from "../assets/TexturaMenu.png";
 const FichaCyC = () => {
   const normalizar = texto => texto?.toLowerCase().trim();
 
@@ -123,7 +123,13 @@ const FichaCyC = () => {
           </>
         )}
 
-        <img src={wordLogo} alt="Exportar a Word" className="botonExportarFijo" title="Exportar a Word" onClick={exportarComoWordHTML}/>
+        <img
+          src={wordLogo}
+          alt="Exportar a Word"
+          className="botonExportarFijo"
+          title="Exportar a Word"
+          onClick={exportarComoWordHTML}
+        />
       </div>
     </>
   );
@@ -140,6 +146,8 @@ const FichaCard = ({ persona }) => {
     foto
   } = persona;
 
+  const [mostrarTrayectoria, setMostrarTrayectoria] = useState(false);
+
   const trayectoria = (() => {
     if (typeof t_administrativa === "string") {
       return t_administrativa.split("\n");
@@ -151,30 +159,46 @@ const FichaCard = ({ persona }) => {
   })();
 
   return (
-    <div className="fichaCyC-card">
-      <div className="fichaCyC-imagen">
+    /* <div className="fichaCyC-card"> */ /*<-----Estilo Sencillo*/ 
+     <div className="fichaCyC-card" style={{
+      backgroundImage: `url(${texturaFondo})`,
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat", 
+      backgroundPosition: "center"
+      }}>
+        
+     <div className="fichaCyC-imagen">
         <img src={`/${foto}`} alt={`Foto de ${nombre}`} />
       </div>
 
       <div className="fichaCyC-datos">
-        <h2 className="fichaCyC-nombre">{nombre}</h2>
+        <h3 className="fichaCyC-nombre">{nombre}</h3>
 
         <ul className="fichaCyC-lista">
           <li><strong>Cargo:</strong> {cargo}</li>
           <li><strong>Grupo Parlamentario:</strong> {grupo_parlamentario}</li>
           <li><strong>Escolaridad:</strong> {escolaridad}</li>
           <li><strong>Preparación Académica:</strong> {pre_academica}</li>
-          {trayectoria.length > 0 && (
-            <li>
-              <strong>Trayectoria Administrativa:</strong>
+        </ul>
+
+        {trayectoria.length > 0 && (
+          <div className="trayectoriaContenedor">
+            <button
+              className="botonTrayectoria"
+              onClick={() => setMostrarTrayectoria(prev => !prev)}
+            >
+              {mostrarTrayectoria ? "Ocultar trayectoria" : "Trajectoria Administrativa"}
+            </button>
+
+            <div className={`trayectoriaCortina ${mostrarTrayectoria ? "abierta" : ""}`}>
               <ul className="fichaCyC-sublista">
                 {trayectoria.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-            </li>
-          )}
-        </ul>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

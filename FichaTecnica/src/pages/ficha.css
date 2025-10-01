@@ -48,11 +48,13 @@
   padding-top: 1rem;
 }
 
+
+
 .fichaCyC-imagen img {
-  max-width: 85%;
-  height: 75%;
-  max-height: 300px;
-  object-fit: cover;
+  max-width: 60%;
+  /* max-height: 75%; */
+  /* max-height: 300px; */
+  /* object-fit: cover; */
   border-radius: 40px;
 }
 
@@ -68,11 +70,16 @@
   list-style-type: none;
   padding-left: 0;
   margin: 0;
+  font-size: 14px
 }
 
 .fichaCyC-lista li,
 .fichaCyC-sublista li {
   margin-bottom: 6px;
+}
+
+.fichaCyC-nombre{
+  font-size: 25px;
 }
 
 .botonExportarFijo {
@@ -89,3 +96,35 @@
 .botonExportarFijo:hover {
   transform: scale(1.1);
 }
+
+.trayectoriaContenedor {
+  margin-top: 1rem;
+}
+
+.botonTrayectoria {
+  background-color: #611232;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.6s ease, transform 0.6s ease;
+}
+
+.botonTrayectoria:hover {
+  background-color: #8a1b4a;
+  transform: scale(1.05); 
+}
+
+.trayectoriaCortina {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+}
+
+.trayectoriaCortina.abierta {
+  max-height: 500px;
+}
+
