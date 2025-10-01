@@ -1,0 +1,28 @@
+{
+  "reportes": [
+    {
+      "id": "bene-vertiente",
+      "titulo": "Beneficiarios por vertiente"
+    },
+    {
+      "id": "bene-estado-municipio",
+      "titulo": "Beneficiarios por vertiente Estado y municipio"
+    },
+    {
+      "id": "covapa-mes",
+      "titulo": "Consulta COVAPAS por Mes y Periodo"
+    },
+    {
+      "id": "covapa-detalle",
+      "titulo": "Consulta COVAPA a detalle"
+    },
+    {
+      "id": "exportar-csv",
+      "titulo": "Exportar Registros Capturados a CSV"
+    },
+    {
+      "id": "exportar-csv-mes",
+      "titulo": "Exportar Registros capturados a CSV por Mes"
+    }
+  ]
+}

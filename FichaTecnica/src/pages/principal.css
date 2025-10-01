@@ -1,0 +1,66 @@
+.texturaFondo {
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  min-height: 70vh;
+  color: #611232;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.texturaFondo h1 {
+  font-size: 70px;
+  margin: 30px 30px 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.botonEntrada {
+  background-color: #F2E8CF;
+  color: #611232;
+  padding: 10px 45px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  max-width: 90vw;       /* evita que se desborde horizontalmente */
+  box-sizing: border-box; /* incluye padding en el ancho total */
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: Noto Sans Bold;
+  margin-bottom: 10px;
+}
+/* Neutraliza todos los estados del enlace */
+.botonEntrada:hover,
+.botonEntrada:focus{
+  background-color: #BC955C; /* <---- Color al pasar el Mouse */
+  color: #fff; /* Cambia el color del texto al pasar el mouse */
+  text-decoration: none; /* Elimina subrayado */
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+.botonEntrada:active,
+.botonEntrada:visited {
+  text-decoration: none;
+  /* color: #611232; */ /* <---- Color al pasar el Mouse */
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .botonEntrada {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .texturaFondo h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+}

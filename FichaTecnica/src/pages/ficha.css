@@ -1,0 +1,91 @@
+.containerTabla {
+  padding: 2rem;
+  max-width: 92%;
+  margin-top: 20px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Noto Sans", sans-serif;
+  color: #333;
+  width: 90vw;
+  height: 100%;
+}
+
+.TituloTabla {
+  color: #7e7d7d;
+}
+
+.TituloTabla2 {
+  color: #050505;
+}
+
+.filaFichas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.fichaCyC-card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.fichaCyC-imagen {
+  width: 280px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.fichaCyC-imagen img {
+  max-width: 85%;
+  height: 75%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.fichaCyC-datos {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fichaCyC-lista,
+.fichaCyC-sublista {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.fichaCyC-lista li,
+.fichaCyC-sublista li {
+  margin-bottom: 6px;
+}
+
+.botonExportarFijo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 90px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.botonExportarFijo:hover {
+  transform: scale(1.1);
+}

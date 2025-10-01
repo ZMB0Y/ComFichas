@@ -1,0 +1,229 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import * as XLSX from "xlsx";
+import { saveAs } from "file-saver";
+import ScrollToTop from "../components/ScrollToTop";
+import RutaIndicadores from "../components/Ruta";
+import "./ficha.css";
+import TexturaMenu from "/TexturaMenu.png";
+
+const BeneVertiente = () => {
+  const { id } = useParams();
+
+  const [data, setData] = useState(null);
+  const [estadoSeleccionado, setEstadoSeleccionado] = useState("Nacional");
+
+  const [anio, setAnio] = useState(2024);
+  const [mesInicial, setMesInicial] = useState(1);
+  const [mesFinal, setMesFinal] = useState(12);
+
+  const meses = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ];
+
+  const fetchData = () => {
+    const url = `https://renic.cultura.gob.mx/fonart/gendatos/repbv.php?a=${anio}&m1=${mesInicial}&m2=${mesFinal}`;
+    fetch(url)
+      .then(res => res.json())
+      .then(json => {
+        setData(json);
+        setEstadoSeleccionado("Nacional");
+      })
+      .catch(err => console.error("Error al cargar datos:", err));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [anio, mesInicial, mesFinal]);
+
+  if (!data) {
+    return (
+      <div className="containerTabla">
+        <p>Cargando datos...</p>
+      </div>
+    );
+  }
+
+  const clavesVertientes = data.vertientes.map((_, i) => `v${i}`);
+  const entidadesMostradas =
+    estadoSeleccionado === "Nacional"
+      ? data.datos
+      : data.datos.filter(d => d.entidad === estadoSeleccionado);
+
+  const mostrarTitulo = estadoSeleccionado === "Nacional"
+    ? "Nacional"
+    : entidadesMostradas[0]?.entidad ?? "";
+
+  const copiarTablaComoHTML = () => {
+    const tabla = document.querySelector(".tablaIndicadores");
+    if (!tabla) return;
+
+    const range = document.createRange();
+    range.selectNode(tabla);
+
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    try {
+      document.execCommand("copy");
+    } catch (err) {
+      console.error("No se pudo copiar la tabla como HTML:", err);
+    }
+
+    selection.removeAllRanges();
+  };
+
+  const exportarExcel = () => {
+    const encabezado = ["Entidad"];
+    clavesVertientes.forEach((v, i) => {
+      encabezado.push(`${data.vertientes[i]} - Beneficiarios`);
+      encabezado.push(`${data.vertientes[i]} - Monto`);
+    });
+    encabezado.push("Total General - Beneficiarios", "Total General - Monto");
+
+    const wsData = [
+      [`${mostrarTitulo} – Beneficiarios por vertiente ${anio} (${meses[mesInicial - 1]} a ${meses[mesFinal - 1]})`],
+      [],
+      encabezado,
+      ...entidadesMostradas.map(entidad => {
+        const fila = [entidad.entidad];
+        clavesVertientes.forEach(v => {
+          fila.push(entidad[v]?.bene ?? 0);
+          fila.push(entidad[v]?.monto ?? 0);
+        });
+        fila.push(entidad.vt?.bene ?? 0);
+        fila.push(entidad.vt?.monto ?? 0);
+        return fila;
+      })
+    ];
+
+    const nombreArchivo = `${mostrarTitulo.replace(/\s+/g, "_")}_Beneficiarios_por_vertiente_${anio}_${mesInicial}_${mesFinal}.xlsx`;
+
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.aoa_to_sheet(wsData);
+    XLSX.utils.book_append_sheet(wb, ws, "Datos");
+    const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+
+    saveAs(new Blob([wbout], { type: "application/octet-stream" }), nombreArchivo);
+  };
+
+  return (
+    <>
+      <ScrollToTop />
+      <div className="texturaFondo" style={{ backgroundImage: `url(${TexturaMenu})` }}>
+        <RutaIndicadores id={id} />
+        <div className="containerTabla">
+          <h2 className="TituloTabla">
+            {mostrarTitulo} – Beneficiarios por vertiente {anio} ({meses[mesInicial - 1]} a {meses[mesFinal - 1]})
+          </h2>
+
+          <div className="tablaConBoton">
+            <div className="contenedorBotonTabla">
+              <select
+                value={mesInicial}
+                onChange={(e) => {
+                  const nuevoMesInicial = Number(e.target.value);
+                  setMesInicial(nuevoMesInicial);
+                  if (mesFinal < nuevoMesInicial) {
+                    setMesFinal(nuevoMesInicial);
+                  }
+                }}
+                className="selectorUniforme"
+              >
+                {meses.map((mes, i) => (
+                  <option key={i + 1} value={i + 1}>{mes}</option>
+                ))}
+              </select>
+
+              <select
+                value={mesFinal}
+                onChange={(e) => setMesFinal(Number(e.target.value))}
+                className="selectorUniforme"
+              >
+                {meses.map((mes, i) => {
+                  const mesNumero = i + 1;
+                  return mesNumero >= mesInicial ? (
+                    <option key={mesNumero} value={mesNumero}>{mes}</option>
+                  ) : null;
+                })}
+              </select>
+
+              <select
+                value={anio}
+                onChange={(e) => setAnio(Number(e.target.value))}
+                className="selectorUniforme"
+              >
+                {[...Array(7)].map((_, i) => {
+                  const year = 2019 + i;
+                  return <option key={year} value={year}>{year}</option>;
+                })}
+              </select>
+
+              <select
+                value={estadoSeleccionado}
+                onChange={(e) => setEstadoSeleccionado(e.target.value)}
+                className="selectorUniforme"
+              >
+                <option value="Nacional">Nacional</option>
+                {data.datos.map((d, i) => (
+                  <option key={i} value={d.entidad}>{d.entidad}</option>
+                ))}
+              </select>
+
+              <button onClick={copiarTablaComoHTML} className="botonCopiar botonUniforme">
+                Copiar tabla
+              </button>
+            </div>
+          </div>
+
+          <div className="tablaScroll">
+            <table className="tablaIndicadores">
+              <thead>
+                <tr>
+                  <th rowSpan="2">Entidad</th>
+                  {data.vertientes.map((nombre, i) => (
+                    <th key={i} colSpan="2">{nombre}</th>
+                  ))}
+                  <th colSpan="2">Total General</th>
+                </tr>
+                <tr>
+                  {[...clavesVertientes, "vt"].map((v, i) => (
+                    <>
+                      <th key={`bene-${v}`}>Beneficiarios</th>
+                      <th key={`monto-${v}`}>Monto</th>
+                    </>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {entidadesMostradas.map((entidad, i) => (
+                  <tr key={i}>
+                    <td>{entidad.entidad}</td>
+                    {clavesVertientes.map(v => (
+                      <>
+                        <td>{entidad[v]?.bene ?? 0}</td>
+                        <td>{entidad[v]?.monto != null ? entidad[v].monto.toLocaleString("es-MX") : "0"}</td>
+                      </>
+                    ))}
+                    <td>{entidad.vt?.bene ?? 0}</td>
+                    <td>{entidad.vt?.monto != null ? entidad.vt.monto.toLocaleString("es-MX") : "0"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="excelButton">
+                        <button onClick={exportarExcel} className="botonCopiar botonUniforme">
+              Exportar a Excel
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BeneVertiente;

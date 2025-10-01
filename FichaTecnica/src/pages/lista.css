@@ -1,0 +1,70 @@
+.containerP {
+  padding: 0px 40px 40px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.listadoGrid {
+  display: flex;
+  grid-template-columns: 45% 45%;
+  justify-content: space-between;
+}
+
+.columna h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.listado {
+  margin: 0px 10px 0px 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.listado li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.listadoLink {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.listadoLink:hover {
+  color: #611232;
+  text-decoration: underline;
+}
+.texturaFondo {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #611232;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.listadoLink {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.listadoLink:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .listadoGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .listado {
+    margin: 0; /* Elimina márgenes laterales en móviles */
+  }
+}
