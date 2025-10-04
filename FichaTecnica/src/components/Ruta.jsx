@@ -9,14 +9,8 @@ const RutaIndicadores = () => {
 
   // Diccionario de reportes
   const nombresReportes = {
-  "/reporte/Cultura-Cinematografia":"Cultura-Cinematografia" ,
-  "/reporte/bene-vertiente": "Beneficiarios por vertiente",
-  "/reporte/bene-vertiente-municipio": "Beneficiarios por vertiente Estado y municipio",
-  "/reporte/bene-estado-municipio": "Beneficiarios por vertiente Estado y municipio",
-  "/reporte/covapa-mes": "Consulta COVAPAS por Mes y Periodo",
-  "/reporte/covapa-detalle": "Consulta COVAPA a detalle",
-  /* "/reporte/exportar-csv": "Exportar Registros Capturados a CSV",
-  "/reporte/exportar-csv-mes": "Exportar Registros capturados a CSV por Mes" */
+  "/reporte/Cultura-Cinematografia":"Cultura y Cinematografia" ,
+  "/reporte/Radio-TV":"Radio y Televisión",
 };
 
   if (nombresReportes[path]) {

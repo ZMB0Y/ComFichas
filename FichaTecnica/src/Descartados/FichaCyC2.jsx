@@ -5,7 +5,7 @@ import "./ficha.css";
 import integrantes from "../JSON/IntegrantesCultura.json";
 import wordLogo from "../assets/Microsoft-Word-Logo.png";
 import texturaFondo from "../assets/TexturaMenu.png";
-import { exportarComoWordHTML } from "./FichaCyCWord"; // ✅ Importación modular
+import { exportarComoWordHTML } from "../pages/FichaCyCWord"; // ✅ Importación modular
 
 const FichaCyC = () => {
   const [fichaActiva, setFichaActiva] = useState(null);

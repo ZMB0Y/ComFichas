@@ -14,13 +14,13 @@ import integrantes from "../JSON/IntegrantesCultura.json";
 import wordLogo from "../assets/Microsoft-Word-Logo.png";
 
 // Componente principal que renderiza todas las fichas y el botón de exportar
-const FichaCyCWord = () => {
+const FichaRyTWord = () => {
   // Función auxiliar para normalizar texto: minúsculas y sin espacios
   const normalizar = texto => texto?.toLowerCase().trim();
 
   // Busca la primera persona cuyo cargo incluya "presidenta" o "presidente"
   const presidente = integrantes.find(p =>
-    normalizar(p.cargo).includes("presidenta") || normalizar(p.cargo).includes("presidente")
+    normalizar(p.cargo).includes("presidente") || normalizar(p.cargo).includes("presidente")
   );
 
   // Filtra todas las personas cuyo cargo incluya "secretaria" o "secretario"
@@ -49,7 +49,7 @@ const FichaCyCWord = () => {
         {/* Renderiza la ficha de la presidenta si existe */}
         {presidente && (
           <>
-            <h3>Presidenta</h3>
+            <h3>Presidente</h3>
             <FichaCard persona={presidente} />
           </>
         )}
@@ -104,6 +104,7 @@ const FichaCard = ({ persona }) => {
     escolaridad,
     pre_academica,
     t_administrativa,
+    iniciativa,
     foto
   } = persona;
 
@@ -111,6 +112,13 @@ const FichaCard = ({ persona }) => {
   const trayectoria = typeof t_administrativa === "string"
     ? t_administrativa.split("\n")
     : Array.isArray(t_administrativa) ? t_administrativa : [];
+
+  // Renderiza la ficha
+
+   // Convierte la iniciativa en array si es string
+  const iniciativas = typeof iniciativa === "string"
+    ? iniciativa.split("\n")
+    : Array.isArray(iniciativa) ? iniciativa : [];
 
   // Renderiza la ficha
   return (
@@ -156,6 +164,23 @@ const FichaCard = ({ persona }) => {
                   </div>
                 </>
               )}
+{/* ////////////////////////////////// */}
+{/* Si hay iniciativa, se muestra como lista */}
+              {iniciativas.length > 0 && (
+                <>
+                  <h3 style={{ color: "#611232", marginBottom: "0.3rem" }}>
+                    Iniciativas
+                  </h3>
+                  <div style={{ marginLeft: "20px" }}>
+                    <ul>
+                      {iniciativas.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              )}
+
             </td>
           </tr>
         </tbody>
@@ -202,7 +227,7 @@ export const exportarComoWordHTML = async () => {
     <html>
       <head>
         <meta charset="utf-8">
-        <title>FichaCyC</title>
+        <title>FichaRyT</title>
         <style>
           body {
             font-family: 'Noto Sans', sans-serif;
@@ -262,10 +287,10 @@ export const exportarComoWordHTML = async () => {
   const blob = new Blob([html], { type: "application/msword;charset=utf-8" });
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = "FichaCyC.doc";
+  link.download = "FichaRyT.doc";
   link.click();
   URL.revokeObjectURL(link.href);
 };
 
 // Exporta el componente principal para que pueda usarse en otras partes del sistema
-export default FichaCyCWord;
+export default FichaRyTWord;

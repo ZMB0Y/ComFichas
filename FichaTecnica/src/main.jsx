@@ -3,11 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import Lista from "./pages/Lista";
-import BeneVertiente from "./pages/BeneVertiente";
-import BeneVerEstadoMunicipio from "./pages/BeneVerEstadoMunicipio"; 
-import CovapaMyP from "./pages/CovapaMyP";
-import CovapaDetalle from "./pages/CovapaDetalle";
 import FichaCyC from "./pages/FichaCyC";
+import FichaRyT from "./pages/FichaRyT";
 import TexturaMenu from "/TexturaMenu.png";
 
 
@@ -24,20 +21,12 @@ const router = createHashRouter([
     errorElement: <P404Page />,
   },
   {
-    path: "/reporte/cultura-cinematografia",
+    path: "/reporte/Cultura-Cinematografia",
     element: <FichaCyC/>,
   },
   {
-    path: "/reporte/bene-estado-municipio",
-    element: <BeneVerEstadoMunicipio />,
-  },
-  {
-    path: "/reporte/covapa-mes",
-    element: <CovapaMyP />,
-  },
-  {
-    path: "/reporte/covapa-detalle",
-    element: <CovapaDetalle />,
+    path: "/reporte/Radio-TV",
+    element: <FichaRyT/>,
   },
 ]);
 

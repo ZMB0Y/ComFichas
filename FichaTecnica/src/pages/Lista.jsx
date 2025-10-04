@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import ScrollToTop from "../components/ScrollToTop";
 import TexturaMenu from "/TexturaMenu.png";
 import "./lista.css";
-import Ruta from "../components/Ruta";
 
 const Lista = () => {
   const [reportes, setReportes] = useState([]);
@@ -17,10 +16,7 @@ const Lista = () => {
 
   const rutasPersonalizadas = {
     "Cultura-Cinematografia": "/reporte/Cultura-Cinematografia",
-    "bene-vertiente": "/reporte/bene-vertiente",
-    "bene-estado-municipio": "/reporte/bene-estado-municipio",
-    "covapa-mes": "/reporte/covapa-mes",
-    "covapa-detalle": "/reporte/covapa-detalle",
+    "Radio-TV": "/reporte/Radio-TV",
     
   };
 
@@ -28,7 +24,6 @@ const Lista = () => {
     <>
       <ScrollToTop />
       <div className="texturaFondo" style={{ backgroundImage: `url(${TexturaMenu})` }}>
-        <Ruta />
         <div className="containerP">
           <div className="listadoGrid">
             <div className="columna">

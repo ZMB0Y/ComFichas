@@ -5,7 +5,6 @@ import "./ficha.css";
 import integrantes from "../JSON/IntegrantesCultura.json";
 import wordLogo from "../assets/Microsoft-Word-Logo.png";
 import texturaFondo from "../assets/TexturaMenu.png";
-import { exportarComoWordHTML } from "./FichaCyCWord"; //Importación modular
 
 const FichaCyC = () => {
   const [fichaActiva, setFichaActiva] = useState(null);
@@ -23,6 +22,61 @@ const FichaCyC = () => {
   const integrantesRestantes = integrantes.filter(p =>
     normalizar(p.cargo) === "integrante"
   );
+
+  const exportarComoWordHTML = async () => {
+    const container = document.querySelector(".containerTabla");
+    if (!container) return;
+
+    const imgElements = container.querySelectorAll("img");
+
+    const promises = Array.from(imgElements).map(async img => {
+      try {
+        const response = await fetch(img.src);
+        const blob = await response.blob();
+        return new Promise(resolve => {
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            img.src = reader.result;
+            resolve();
+          };
+          reader.readAsDataURL(blob);
+        });
+      } catch (error) {
+        console.warn("No se pudo convertir la imagen:", img.src);
+      }
+    });
+
+    await Promise.all(promises);
+
+    const html = `
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <title>FichaCyC</title>
+          <style>
+            body { font-family: 'Noto Sans', sans-serif; color: #333; }
+            h2, h3 { color: #611232; }
+            .fichaCyC-card { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; }
+            .fichaCyC-nombre { font-size: 1.4rem; font-weight: bold; margin-bottom: 0.5rem; }
+            .fichaCyC-lista { list-style: none; padding: 0; }
+            .fichaCyC-lista li { margin-bottom: 0.3rem; }
+            .fichaCyC-sublista { margin-top: 0.5rem; padding-left: 1rem; }
+            img { max-width: 100%; height: auto; margin-bottom: 1rem; }
+          </style>
+        </head>
+        <body>
+          ${container.innerHTML}
+        </body>
+      </html>
+    `;
+
+    const blob = new Blob([html], { type: "application/msword;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "FichaCyC.doc";
+    link.click();
+    URL.revokeObjectURL(link.href);
+  };
 
   return (
     <>
@@ -91,7 +145,6 @@ const FichaCyC = () => {
           </>
         )}
 
-        {/* Botón que llama a la función externa */}
         <img
           src={wordLogo}
           alt="Exportar a Word"

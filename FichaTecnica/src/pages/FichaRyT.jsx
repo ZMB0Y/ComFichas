@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import ScrollToTop from "../components/ScrollToTop";
 import RutaIndicadores from "../components/Ruta";
 import "./ficha.css";
-import integrantes from "../JSON/IntegrantesCultura.json";
+import integrantes from "../JSON/IntegrantesRyT.json";
 import wordLogo from "../assets/Microsoft-Word-Logo.png";
 import texturaFondo from "../assets/TexturaMenu.png";
-import { exportarComoWordHTML } from "./FichaCyCWord"; //Importación modular
+import { exportarComoWordHTML } from "./FichaRyTWord";
 
-const FichaCyC = () => {
-  const [fichaActiva, setFichaActiva] = useState(null);
+const FichaRyT = () => {
+  // Estado que guarda qué panel está activo y de quién
+  const [panelActivo, setPanelActivo] = useState({ nombre: null, tipo: null });
 
   const normalizar = texto => texto?.toLowerCase().trim();
 
   const presidente = integrantes.find(p =>
-    normalizar(p.cargo).includes("presidenta") || normalizar(p.cargo).includes("presidente")
+    normalizar(p.cargo).includes("presidente")
   );
 
   const secretarios = integrantes.filter(p =>
@@ -33,15 +34,17 @@ const FichaCyC = () => {
 
         {presidente && (
           <>
-            <h3 className="TituloTabla">Presidenta</h3>
+            <h3 className="TituloTabla">Presidente</h3>
             <hr className="red" />
             <div className="filaFichas">
               <FichaCard
                 persona={presidente}
-                activa={fichaActiva === presidente.nombre}
-                activar={() =>
-                  setFichaActiva(prev =>
-                    prev === presidente.nombre ? null : presidente.nombre
+                panelActivo={panelActivo}
+                activar={(tipo) =>
+                  setPanelActivo(prev =>
+                    prev.nombre === presidente.nombre && prev.tipo === tipo
+                      ? { nombre: null, tipo: null }
+                      : { nombre: presidente.nombre, tipo }
                   )
                 }
               />
@@ -58,10 +61,12 @@ const FichaCyC = () => {
                 <FichaCard
                   key={`sec-${index}`}
                   persona={persona}
-                  activa={fichaActiva === persona.nombre}
-                  activar={() =>
-                    setFichaActiva(prev =>
-                      prev === persona.nombre ? null : persona.nombre
+                  panelActivo={panelActivo}
+                  activar={(tipo) =>
+                    setPanelActivo(prev =>
+                      prev.nombre === persona.nombre && prev.tipo === tipo
+                        ? { nombre: null, tipo: null }
+                        : { nombre: persona.nombre, tipo }
                     )
                   }
                 />
@@ -79,10 +84,12 @@ const FichaCyC = () => {
                 <FichaCard
                   key={`int-${index}`}
                   persona={persona}
-                  activa={fichaActiva === persona.nombre}
-                  activar={() =>
-                    setFichaActiva(prev =>
-                      prev === persona.nombre ? null : persona.nombre
+                  panelActivo={panelActivo}
+                  activar={(tipo) =>
+                    setPanelActivo(prev =>
+                      prev.nombre === persona.nombre && prev.tipo === tipo
+                        ? { nombre: null, tipo: null }
+                        : { nombre: persona.nombre, tipo }
                     )
                   }
                 />
@@ -91,7 +98,6 @@ const FichaCyC = () => {
           </>
         )}
 
-        {/* Botón que llama a la función externa */}
         <img
           src={wordLogo}
           alt="Exportar a Word"
@@ -104,7 +110,7 @@ const FichaCyC = () => {
   );
 };
 
-const FichaCard = ({ persona, activa, activar }) => {
+const FichaCard = ({ persona, panelActivo, activar }) => {
   const {
     nombre,
     cargo,
@@ -112,18 +118,24 @@ const FichaCard = ({ persona, activa, activar }) => {
     escolaridad,
     pre_academica,
     t_administrativa,
+    iniciativa,
     foto
   } = persona;
 
-  const trayectoria = (() => {
-    if (typeof t_administrativa === "string") {
-      return t_administrativa.split("\n");
-    }
-    if (Array.isArray(t_administrativa)) {
-      return t_administrativa;
-    }
-    return [];
-  })();
+  const trayectoria = Array.isArray(t_administrativa)
+    ? t_administrativa
+    : typeof t_administrativa === "string"
+    ? t_administrativa.split("\n")
+    : [];
+
+  const iniciativas = Array.isArray(iniciativa)
+    ? iniciativa
+    : typeof iniciativa === "string"
+    ? iniciativa.split("\n")
+    : [];
+
+  const mostrarTrayectoria = panelActivo.nombre === nombre && panelActivo.tipo === "trayectoria";
+  const mostrarIniciativa = panelActivo.nombre === nombre && panelActivo.tipo === "iniciativa";
 
   return (
     <div
@@ -151,13 +163,29 @@ const FichaCard = ({ persona, activa, activar }) => {
 
         {trayectoria.length > 0 && (
           <div className="trayectoriaContenedor">
-            <button className="botonTrayectoria" onClick={activar}>
-              {activa ? "Ocultar trayectoria" : "Trayectoria Administrativa"}
+            <button className="botonTrayectoria" onClick={() => activar("trayectoria")}>
+              {mostrarTrayectoria ? "Ocultar trayectoria" : "Trayectoria Administrativa"}
             </button>
 
-            <div className={`trayectoriaCortina ${activa ? "abierta" : ""}`}>
+            <div className={`trayectoriaCortina ${mostrarTrayectoria ? "abierta" : ""}`}>
               <ul className="fichaCyC-sublista">
                 {trayectoria.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {iniciativas.length > 0 && (
+          <div className="trayectoriaContenedor">
+            <button className="botonTrayectoria" onClick={() => activar("iniciativa")}>
+              {mostrarIniciativa ? "Ocultar Iniciativa" : "Iniciativas"}
+            </button>
+
+            <div className={`trayectoriaCortina ${mostrarIniciativa ? "abierta" : ""}`}>
+              <ul className="fichaCyC-sublista">
+                {iniciativas.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -169,4 +197,4 @@ const FichaCard = ({ persona, activa, activar }) => {
   );
 };
 
-export default FichaCyC;
+export default FichaRyT;
