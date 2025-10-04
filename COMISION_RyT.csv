@@ -1,4 +1,4 @@
-﻿id,nombre,cargo,fecha_ini,grupo_parlamentario,n_legislatura,periodo_ini,periodo_fin,escolaridad,pre_academica,curp,correo,numero,ext,camara_diputados,sistema_legislativa,t_administrativa,foto
+﻿id,nombre,cargo,fecha_ini,grupo_parlamentario,n_legislatura,periodo_ini,periodo_fin,escolaridad,pre_academica,curp,correo,numero,ext,camara_diputados,sistema_legislativa,t_administrativa,iniciativa,foto
 1,MIGUEL ÁNGEL MONRAZ IBARRA,PRESIDENTE,14/08/2024,PAN,LXV,29/08/2021,31/08/2024,LICENCIATURA,DERECHO,N/A,miguel.monraz@diputados.gob.mx,5550360000,59864,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=323,SIL - Sistema de Información Legislativa-PopUp Legislador,"Director de Tianguis en el gobierno de Guadalajara, Jalisco.
 Encargado Administrativo de la Policía Auxiliar del gobierno de Jalisco.
 Coordinador Operativo de Inspección a Reglamentos y Espectáculos en el gobierno de Guadalajara, Jalisco.
@@ -10,8 +10,11 @@ Diputado local en la LVI Legislatura del Congreso de Jalisco.
 Diputado local suplente en la LV Legislatura del Congreso de Jalisco (Sin toma de protesta).
 Presidente del Comité Directivo Estatal del PAN en Jalisco.
 Coordinador nacional de síndicos y regidores del PAN.
-Delegado político del Comité Ejecutivo Nacional del PAN en Colima.",Integrantes/RyT/MIGUEL_ANGEL.jpg
-2,SEBASTIÁN EBRARD LESTRADE,SECRETARIO,05/11/2024,MORENA,LXVI,29/08/2021,31/08/2027,LICENCIATURA,ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES,N/A,sebastian.ebrard@diputados.gob.mx,5550360000,61533,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=972,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9229029,Asesor,Integrantes/RyT/SEBASTIAN_EBRARD.jpg
+Delegado político del Comité Ejecutivo Nacional del PAN en Colima.","Proyecto de decreto que adiciona el artículo 49 de la Ley General de Cultura Física y Deporte.
+Proyecto de decreto que adiciona el artículo 5o. de la Ley General de Cultura y Derechos Culturales.
+Proyecto de decreto que reforma el artículo 13 de la Ley General de Cultura Física y Deporte.
+Proyecto de decreto que reforma el artículo 8o. de la Ley Federal de Cinematografía.",Integrantes/RyT/MIGUEL_ANGEL.jpg
+2,SEBASTIÁN EBRARD LESTRADE,SECRETARIO,05/11/2024,MORENA,LXVI,29/08/2021,31/08/2027,LICENCIATURA,ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES,N/A,sebastian.ebrard@diputados.gob.mx,5550360000,61533,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=972,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9229029,Asesor,Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/SEBASTIAN_EBRARD.jpg
 3,ANAÍS MIRIAM BURGOS HERNÁNDEZ,SECRETARÍA,30/10/2024,MORENA,LXVI,29/08/2021,31/08/2027,LICENCIATURA,COMUNICACIÓN Y CULTURA,N/A,anais.burgos@diputados.gob.mx,5550360000,61460,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=157,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228702,"Asesora Legislativa.
 Asesora de la Dirección General del Sistema de Transporte Colectivo Metro.
 Secretaria de Educación de la Ciudad de México.
@@ -20,12 +23,12 @@ Diputada local en la LX Legislatura del Congreso del estado de México.
 Diputada local en la LIX Legislatura del Congreso del estado de México.
 Coordinadora distrital de Morena en promoción y defensa del voto.
 Secretaria de jóvenes en el Primer Comité Ejecutivo Estatal de Morena.
-Fundadora de Morena.",Integrantes/RyT/ANAIS_MIRIAM.jpg
+Fundadora de Morena.",Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/ANAIS_MIRIAM.jpg
 4,KAREN YAITI CALCANEO CONSTANTINO,SECRETARÍA,05/11/2024,MORENA,LXVI,29/08/2021,31/08/2027,LICENCIATURA,INFORMATICA ,N/A,karen.calcaneo@diputados.gob.mx,5550360000,61822,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=393,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228872,"Directora del Plantel 22 del Colegio de Bachilleres de Chiapas.
 Coordinadora de Zona del Colegio de Bachilleres de Chiapas.
 Secretaria general del Comité Ejecutivo Estatal de Morena en Chiapas.
 Consejera estatal de Morena en Chiapas.
-Candidata a diputación local.",Integrantes/RyT/KAREN_YAITI.jpg
+Candidata a diputación local.",Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/KAREN_YAITI.jpg
 5,CLAUDIA LETICIA GARFIAS ALCANTARA,SECRETARÍA,30/10/2024,MORENA,LXVI,29/08/2021,31/08/2027,LICENCIATURA,DERECHO,N/A,claudia.garfias@diputados.gob.mx,5550360000,61498,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=138,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228664,"Regidora suplente.
 Titular de la Procuraduría de la Defensa del Menor y la Familia del Sistema Municipal DIF en Chiconcuac, estado de México.
 Asesora en sindicatura de Chiconcuac, estado de México.
@@ -51,10 +54,10 @@ Coordinadora de logística, perifoneo, brigadas y propaganda en la campaña para
 Integrante de las brigadas del sol en la campaña a gobernador en el estado de México.
 Integrante del equipo de campaña para la elección para presidente municipal en Acolman, estado de México.
 Integrante del PRD.
-Integrante de Morena.",Integrantes/RyT/CLAUDIA_LETICIA.jpg
-6,HECTOR ARMANDO CABADA ALVIDREZ,SECRETARIO,07/10/2021,MORENA,LXV,29/08/2021,31/08/2027,PREPARATORIA,N/A,N/A,hector.cabada@diputados.gob.mx,5550360000,61841,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=314,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9227736,"Presidente municipal de Ciudad Juárez, Chihuahua.",Integrantes/RyT/HECTOR_ARMANDO.jpg
+Integrante de Morena.",Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/CLAUDIA_LETICIA.jpg
+6,HECTOR ARMANDO CABADA ALVIDREZ,SECRETARIO,07/10/2021,MORENA,LXV,29/08/2021,31/08/2027,PREPARATORIA,N/A,N/A,hector.cabada@diputados.gob.mx,5550360000,61841,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=314,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9227736,"Presidente municipal de Ciudad Juárez, Chihuahua.",Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/HECTOR_ARMANDO.jpg
 7,ANA MIRIAM FERRÁEZ CENTENO,SECRETARÍA,30/10/2024,MORENA,LXVI,29/08/2021,31/08/2027,LICENCIATURA,DERECHO,N/A,ana.ferraez@diputados.gob.mx,5550360000,61474,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=281,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228224,"Diputada local en la LXVI Legislatura del Congreso de Veracruz. Presidenta de la Comisión de Derechos de la Niñez, la Adolescencia y la Familia. Secretaria de la Comisión de Derechos Humanos y Atención a Grupos Vulnerables.
-Diputada local en la LXV Legislatura del Congreso de Veracruz.",Integrantes/RyT/ANA_MIRIAM.jpg
+Diputada local en la LXV Legislatura del Congreso de Veracruz.",Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/ANA_MIRIAM.jpg
 8,MANUEL DE JESÚS BALDENEBRO ARREDONDO,SECRETARIO,N/A,MORENA,LXIV,29/08/2021,31/08/2027,LICENCIATURA,CIENCIAS DE LA SALUD,N/A,manuel.baldenebro@diputados.gob.mx,5550360000,67881,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=248,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9223870,"Presidente municipal de San Luís Rio Colorado, Sonora.
 Cirujano del ISSSTESON.
 Médico cirujano del IMSS.
@@ -71,12 +74,13 @@ Presidente de la Comisión de Fomento a la Vivienda de la Sección VII del SNTSS
 Secretario general de la Delegación 5 del SNTSS.
 Integrante de la Comisión de Seguridad e Higiene de la Delegación 5 del SNTSS.
 Secretario general de la Delegación 5 del Sindicato Nacional de Trabajadores del Seguro Social (SNTSS).
-Miembro activo de la Confederación Nacional de Organizaciones Populares",Integrantes/RyT/MANUEL_JESUS.jpg
+Miembro activo de la Confederación Nacional de Organizaciones Populares",Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/MANUEL_JESUS.jpg
 9,ALEJANDRA CHEDRAUI PERALTA,INTEGRANTE,30/10/2024,MORENA,LXVI,29/08/2021,31/08/2027,LICENCIATURA,MERCADOTECNIA,N/A,alejandra.chedraui@diputados.gob.mx,5550360000,61372,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=330,http://www.sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9229342,"Secretaria Técnica del Sistema Municipal de Protección Integral de Niñas, Niños y Adolescentes de Huixquilucan, estado de México.
 Regidora de Huixquilucan, estado de México.
 Integrante del Consejo Político Nacional y Estatal del PVEM.
-Integrante del PVEM.",Integrantes/RyT/ALEJANDRA_CHEDRAUI.jpg
-10,MARIA DEL ROSARIO VERA,SECRETARÍA,N/A,PAN,LXVI,29/08/2021,31/08/2027,N/A,N/A,N/A,maria.delrosario@diputados.gob.mx,5550360000,61629,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=775,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228189,Sin datos disponibles ,Integrantes/RyT/MARIA_ROSARIO.jpg
+Integrante del PVEM.",Proyecto de decreto que expide la Ley General que Asegura el Respeto y la Implementación de los Derechos de los Pueblos y Comunidades Indígenas y Afromexicanas.,Integrantes/RyT/ALEJANDRA_CHEDRAUI.jpg
+10,MARIA DEL ROSARIO VERA,SECRETARÍA,N/A,PAN,LXVI,29/08/2021,31/08/2027,N/A,N/A,N/A,maria.delrosario@diputados.gob.mx,5550360000,61629,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=775,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228189,Sin datos disponibles ,"Proyecto de decreto que adiciona el artículo 5o. de la Ley General de Cultura y Derechos Culturales.
+Proyecto de decreto que reforma el artículo 13 de la Ley General de Cultura Física y Deporte.",Integrantes/RyT/MARIA_ROSARIO.jpg
 11,VÍCTOR ADRIÁN MARTÍNEZ TERRAZAS,INTEGRANTE,30/10/2024,PAN,LXVI,29/08/2021,31/08/2027,LICENCIATURA,ADMINISTRACIÓN DE EMPRESAS,N/A,adrian.martinez@diputados.gob.mx,5550360000,59889,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=444,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9229154,"Regidor de Cuernavaca, Morelos.
 Regidor de Cuernavaca, Morelos.
 Asesor del Congreso de Morelos.
@@ -85,12 +89,18 @@ Delegado federal de la Profeco en Morelos.
 Secretario particular del Secretario de Planeación y Desarrollo del gobierno de Morelos.
 Coordinador del Proyecto de la Oficina del Gobernador de Morelos.
 Coordinador de Cultura en la Dirección de Atención a la Juventud de la Secretaría de Desarrollo Humano del gobierno de Cuernavaca, Morelos.
-Coordinador del Programa de Becas a Jóvenes de Escasos Recursos en la Dirección de Gestoría Social de la Secretaría de Desarrollo Comunitario del gobierno de Cuernavaca, Morelos.",Integrantes/RyT/VICTOR_ADRIAN.jpg
+Coordinador del Programa de Becas a Jóvenes de Escasos Recursos en la Dirección de Gestoría Social de la Secretaría de Desarrollo Comunitario del gobierno de Cuernavaca, Morelos.","Proyecto de decreto que reforma el artículo 8o. de la Ley Federal de Cinematografía.
+Proyecto de decreto que adiciona el artículo 49 de la Ley General de Cultura Física y Deporte.
+Proyecto de decreto que adiciona el artículo 5o. de la Ley General de Cultura y Derechos Culturales.
+Proyecto de decreto que reforma el artículo 13 de la Ley General de Cultura Física y Deporte.",Integrantes/RyT/VICTOR_ADRIAN.jpg
 12,ABRIL FERREYRO ROSADO,INTEGRANTE,30/10/2024,PAN,LXVI,29/08/2021,31/08/2027,LICENCIATURA,DISEÑO DE MODAS,N/A,abril.ferreyro@diputados.gob.mx,5550360000,59914,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=403,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9229120,"Directora de la Feria Yucatán en Xmatkuil.
 Directora General del Instituto Promotor de Ferias de Yucatán.
 Secretaria Ejecutiva del Comité Permanente del Carnaval de Mérida.
 Secretaria Ejecutiva del Comité Permanente del Carnaval de Mérida
-Diputada local en la LXIII Legislatura del Congreso de Yucatán. Vicepresidenta de la Comisión de Arte y Cultura. Secretaria de las comisiones de Derechos Humanos; y, Juventud, Cultura Física y Deporte.",Integrantes/RyT/ABRIL_FERREYRO.jpg
+Diputada local en la LXIII Legislatura del Congreso de Yucatán. Vicepresidenta de la Comisión de Arte y Cultura. Secretaria de las comisiones de Derechos Humanos; y, Juventud, Cultura Física y Deporte.","Proyecto de decreto que reforma el artículo 8o. de la Ley Federal de Cinematografía.
+Proyecto de decreto que adiciona el artículo 49 de la Ley General de Cultura Física y Deporte.
+Proyecto de decreto que adiciona el artículo 5o. de la Ley General de Cultura y Derechos Culturales.
+Proyecto de decreto que reforma el artículo 13 de la Ley General de Cultura Física y Deporte.",Integrantes/RyT/ABRIL_FERREYRO.jpg
 13,FIDEL DANIEL CHIMAL GARCÍA,INTEGRANTE,30/10/2024,PAN,LXVI,29/08/2021,31/08/2027,LICENCIATURA,COMUNICACIÓN SOCIAL,N/A,fidel.chimal@diputados.gob.mx,5550360000,59918,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=940,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9229147,"Secretario Técnico de la Comisión de Economía Social y Fomento del Cooperativismo de la Cámara de Diputados.
 Coordinador de Asesores en la alcaldía Benito Juárez.
 Secretario Técnico de la Comisión Registral y Notarial de la Asamblea Legislativa del Distrito Federal.
@@ -99,17 +109,20 @@ Integrante del PAN.
 Secretario general y presidente del Comité Directivo del PAN en la demarcación territorial Gustavo A. Madero.
 Secretario de acción juvenil en la alcaldía Gustavo A. Madero.
 Consejero regional del PAN en la Ciudad de México.
-Integrante del Comité Directivo Regional del PAN en la Ciudad de México.",Integrantes/RyT/FIDEL_DANIEL.jpg
+Integrante del Comité Directivo Regional del PAN en la Ciudad de México.","Proyecto de decreto que reforma el artículo 8o. de la Ley Federal de Cinematografía.
+Proyecto de decreto que adiciona el artículo 49 de la Ley General de Cultura Física y Deporte.
+Proyecto de decreto que adiciona el artículo 5o. de la Ley General de Cultura y Derechos Culturales.
+Proyecto de decreto que reforma el artículo 13 de la Ley General de Cultura Física y Deporte.",Integrantes/RyT/FIDEL_DANIEL.jpg
 14,ADRIÁN GONZÁLEZ NAVEDA,SECRETARIO,30/10/2024,PT,LXVI,29/08/2021,31/08/2027,LICENCIATURA,CIENCIAS POLITICAS,N/A,adrian.gonzalez@diputados.gob.mx,5550360000,62067,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=280,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228218#PerfiLegislador,"Director Regional de la Secretaria de Bienestar.
 Secretario Técnico de la Comisión Especial Sur-Sureste en la LXIII Legislatura de la Cámara de Senadores.
 Diputado local suplente en la LXV Legislatura del Congreso de Veracruz.
-Licenciatura en Ciencia Política por el Instituto Tecnológico y de Estudios Superiores de Monterrey.",Integrantes/RyT/ADRIAN_GONZALEZ.jpg
+Licenciatura en Ciencia Política por el Instituto Tecnológico y de Estudios Superiores de Monterrey.",,Integrantes/RyT/ADRIAN_GONZALEZ.jpg
 15,BRÍGIDO RAMIRO MORENO HERNÁNDEZ,INTEGRANTE,"07/10/2021	",PT,LXV,29/08/2021,31/08/2027,LICENCIATURA,MÉDICO VETERINARIO ZOOTECNISTA,N/A,brigido.moreno@diputados.gob.mx,5550360000,62054,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=61,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9227300,"Secretario del Ayuntamiento de Acuña, Coahuila.
 Subdelegado de Censos Económicos y Agropecuarios de la Secretaría de Programación y Presupuesto.
 Regidor por el PT.
 Síndico por la Unidad Democrática de Coahuila.
 Fundador del Partido Unidad Democrática de Coahuila.
-Presidente del Comité Ejecutivo Estatal del Partido Unidad Democrática de Coahuila.",Integrantes/RyT/BRIGIDO_RAMIRO.jpg
+Presidente del Comité Ejecutivo Estatal del Partido Unidad Democrática de Coahuila.",,Integrantes/RyT/BRIGIDO_RAMIRO.jpg
 16,CLAUDIA RUIZ MASSIEU SALINAS,SECRETARÍA,30/10/2024,MC,LXVI,29/08/2021,31/08/2027,DOCTORADO,DERECHO,N/A,claudia.ruizmassieu@diputados.gob.mx,5550360000,62636,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=457,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228774,"Secretaria de Relaciones Exteriores.
 Secretaria de Turismo.
 Coordinadora de Asesores del Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública en la Secretaría de Seguridad Pública
@@ -127,7 +140,7 @@ Secretaria coordinadora del Movimiento Nacional de Vinculación Ciudadana del PR
 Vicepresidenta de Fundación Colosio en el Distrito Federal.
 Subsecretaria del Movimiento de Vinculación Ciudadana de la Confederación Nacional de Organizaciones Populares.
 Integrante del PRI.
-Coordinadora del Movimiento Nacional de Vinculación Ciudadana de la Confederación Nacional de Organizaciones Populares.",Integrantes/RyT/CLAUDIA_RUIZ.jpg
+Coordinadora del Movimiento Nacional de Vinculación Ciudadana de la Confederación Nacional de Organizaciones Populares.",,Integrantes/RyT/CLAUDIA_RUIZ.jpg
 17,RUBÉN IGNACIO MOREIRA VALDEZ,SECRETARIO,30/10/2024,PRI,LXVI,29/08/2021,31/08/2027,MAESTRIA,GOBERNANZA Y DERECHOS HUMANOS,N/A,ruben.moreira@diputados.gob.mx,5550360000,59410,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=364,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9229222,"Gobernador de Coahuila.
 Subsecretario de Asuntos Políticos de la Secretaría de Gobierno del gobierno de Coahuila.
 Subsecretario de Planeación Educativa de la Secretaría de Educación Pública del gobierno de Coahuila (SEPC).
@@ -152,18 +165,23 @@ Representante del PRI ante el Consejo Estatal Electoral de Coahuila.
 Secretario de elecciones del Comité Directivo Municipal del PRI en Saltillo, Coahuila.
 Consejero político nacional, estatal y municipal del PRI.
 Integrante y asesor de la Confederación de Trabajadores de México.
-Consejero político nacional de la Confederación Nacional Campesina del PRI.",Integrantes/RyT/RUBEN_IGNACIO.jpg
+Consejero político nacional de la Confederación Nacional Campesina del PRI.","Por el que se exhorta a la Secretaría de Educación Pública y a la Secretaría de Cultura para que, respectivamente, agilicen la liberación de los pagos de honorarios de Canal 11, Canal 22 y del Instituto Nacional de Bellas Artes y literatura, así como del Sistema Público de Radiodifusión del Estado Mexicano (Canal 14) y el Instituto Mexicano de la Radio.
+Por el que se exhorta a la Alcaldía Venustiano Carranza de la Ciudad de México, para que realicen la restauración y el mantenimiento de la escultura de Miguel Ramos Arizpe, que se ubica en la plaza del mismo nombre frente a la Calle Eduardo Molina.
+Por el que se exhorta al INE a ofrecer una disculpa pública sobre el uso no autorizado de la voz sintética que imita al actor José ¿Pepe¿ Lavat en sus redes sociales institucionales el cual vulneró derechos de autor, así como, adoptar medidas correctivas y de no repetición de este tipo de actos que atentan contra el sector artístico y cultural del país y se exhorta a la Secretaría de Cultura y al INDAUTOR para que, emitan una resolución técnica y jurídica de este caso, respecto de la violación a los derechos conexos de artista interprete o ejecutante.
+Por el que se exhorta a la Alcaldía Venustiano Carranza de la Ciudad de México, a realizar la restauración y el mantenimiento de la escultura de Miguel Ramos Arizpe, ubicada en la plaza del mismo nombre frente a la calle Eduardo Molina.
+Por el que se exhorta a la SEP y a la Secretaría de Cultura, a agilizar la liberación de los pagos de las y los trabajadores por honorarios de Canal 11, Canal 22 y del Instituto Nacional de Bellas Artes y Literatura, así como del Sistema Público de Radiodifusión del Estado Mexicano (Canal 14) y del Instituto Mexicano de la Radio
+Por el que se exhorta al INE a ofrecer una disculpa pública sobre el uso no autorizado de la voz sintética que imita al actor José ¿Pepe¿ Lavat en sus redes sociales institucionales el cual vulneró derechos de autor, así como, adoptar medidas correctivas y de no repetición de este tipo de actos que atentan contra el sector artístico y cultural del país y se exhorta a la Secretaría de Cultura y al INDAUTOR para que, emitan una resolución técnica y jurídica de este caso, respecto de la violación a los derechos conexos de artista interprete o ejecutante.",Integrantes/RyT/RUBEN_IGNACIO.jpg
 18,JOSÉ LUIS DURÁN REVELES,SECRETARIO,30/10/2024,PVEM,LXVI,29/08/2021,31/08/2027,MAESTRIA,ADMINISTRACIÓN DE NEGOCIOS CON ORIENTACIÓN EN FINANZAS,N/A, joseluis.duran@diputados.gob.mx,5550360000,68850,https://sitl.diputados.gob.mx/LXVI_leg/curricula.php?dipt=148,https://sil.gobernacion.gob.mx/Librerias/pp_PerfilLegislador.php?Referencia=9228684,"Presidente municipal de Naucalpan de Juárez, estado de México.
 Presidente municipal de Naucalpan de Juárez, estado de México.
 Subsecretario de Comunicación Social de la Segob.
 Diputado federal en la LV Legislatura.
-Diputado local de la L Legislatura del Congreso del estado de México.",Integrantes/RyT/JOSE_LUIS.jpg
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,
+Diputado local de la L Legislatura del Congreso del estado de México.",,Integrantes/RyT/JOSE_LUIS.jpg
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,

@@ -104,6 +104,7 @@ const FichaCard = ({ persona }) => {
     escolaridad,
     pre_academica,
     t_administrativa,
+    iniciativa,
     foto
   } = persona;
 
@@ -111,6 +112,13 @@ const FichaCard = ({ persona }) => {
   const trayectoria = typeof t_administrativa === "string"
     ? t_administrativa.split("\n")
     : Array.isArray(t_administrativa) ? t_administrativa : [];
+
+  // Renderiza la ficha
+
+   // Convierte las iniciativas en array si es string
+  const iniciativas = typeof iniciativa === "string"
+    ? iniciativa.split("\n")
+    : Array.isArray(iniciativa) ? iniciativa : [];
 
   // Renderiza la ficha
   return (
@@ -142,6 +150,7 @@ const FichaCard = ({ persona }) => {
               </ul>
 
               {/* Si hay trayectoria, se muestra como lista */}
+              <br />
               {trayectoria.length > 0 && (
                 <>
                   <h3 style={{ color: "#611232", marginBottom: "0.3rem" }}>
@@ -150,6 +159,22 @@ const FichaCard = ({ persona }) => {
                   <div style={{ marginLeft: "20px" }}>
                     <ul>
                       {trayectoria.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              )}
+              <br />
+              {/* Si hay iniciativa, se muestra como lista */}
+              {iniciativas.length > 0 && (
+                <>
+                  <h3 style={{ color: "#611232", marginBottom: "0.3rem" }}>
+                    Iniciativas Presentadas
+                  </h3>
+                  <div style={{ marginLeft: "20px" }}>
+                    <ul>
+                      {iniciativas.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
